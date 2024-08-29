@@ -1,5 +1,5 @@
 <?php
-// menghubungkan dengan file koneksi.php dan navbar
+// menghubungkan dengan file koneksi.php dan
 require_once('koneksi.php');
 require_once('navbar.php');
 // membuat class DosenWali yang mewarisi class Withdrawals
