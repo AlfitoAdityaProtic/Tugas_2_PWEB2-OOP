@@ -23,6 +23,12 @@
         <li class="nav-item">
           <a class="nav-link" href="WITHDRAWALS.PHP">Student Withdrawals</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="waliDosen.PHP">Wali Dosen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="KoorProdi.PHP">Koordinator Prodi</a>
+        </li>
       </ul>
     </div>
   </div>

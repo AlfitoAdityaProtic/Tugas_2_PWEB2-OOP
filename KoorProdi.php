@@ -1,8 +1,17 @@
 <?php 
 require_once('koneksi.php');
-include('navbar.php');
-
-$data = new Withdrawals();
+require_once('navbar.php');
+class KoorProdi extends Withdrawals{
+    public function __construct() {
+        parent::__construct();
+    }
+    public function tampilData() {
+        $sql = "SELECT * FROM student_withdrawals WHERE decree_number='300'";
+        $result = $this->conn->query($sql);
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+}
+$data = new KoorProdi();
 $a = $data->tampilData();
 ?>
 <!DOCTYPE html>

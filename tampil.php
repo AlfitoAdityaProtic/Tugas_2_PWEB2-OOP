@@ -5,7 +5,7 @@ class laporan extends database{
     public function __construct(){
         parent::__construct();
     }
-    public function tampilDataReports(){
+    public function tampilData(){
         $tampil = "SELECT * FROM reports";
         $result = $this->conn->query($tampil);
         return $result->fetch_all(MYSQLI_ASSOC);
@@ -13,7 +13,7 @@ class laporan extends database{
     
 }
 $data = new laporan();
-$db = $data->tampilDataReports();
+$db = $data->tampilData();
 ?>
 <!DOCTYPE html>
 <html lang="en">

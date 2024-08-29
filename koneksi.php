@@ -16,4 +16,15 @@ class Database{
     $this->conn->close();
   }
 }
+class Withdrawals extends database{
+  public function __construct() {
+      parent::__construct();
+  }
+  public function tampilData() {
+      $sql = "SELECT * FROM student_withdrawals";
+      $result = $this->conn->query($sql);
+      return $result->fetch_all(MYSQLI_ASSOC);
+  }
+}
+
 ?>
