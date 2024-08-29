@@ -1,16 +1,20 @@
-<?php 
+<?php
+// menghubungkan dengan file koneksi.php dan navbar
 require_once('koneksi.php');
 require_once('navbar.php');
+// membuat class DosenWali yang mewarisi class Withdrawals
 class DosenWali extends Withdrawals{
     public function __construct() {
         parent::__construct();
     }
+    // method yang menampilkan tabel student_withdrawals dengan syarat decree number = 100
     public function tampilData() {
         $sql = "SELECT * FROM student_withdrawals WHERE decree_number='100'";
         $result = $this->conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
+// instansiasi objek
 $data = new DosenWali();
 $a = $data->tampilData();
 ?>

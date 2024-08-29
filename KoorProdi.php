@@ -1,10 +1,13 @@
 <?php 
+// menghubungkan ke database dan navbar
 require_once('koneksi.php');
 require_once('navbar.php');
+// membuat class KoorProdi yang mewarisi class Withdrawals
 class KoorProdi extends Withdrawals{
     public function __construct() {
         parent::__construct();
     }
+    // method yang menampilkan tabel student_withdrawals dengan syarat decree number = 300
     public function tampilData() {
         $sql = "SELECT * FROM student_withdrawals WHERE decree_number='300'";
         $result = $this->conn->query($sql);

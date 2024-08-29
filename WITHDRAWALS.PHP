@@ -1,7 +1,8 @@
 <?php 
+// menghubungkan ke database dan navbar
 require_once('koneksi.php');
 include('navbar.php');
-
+// instansiasi objek
 $data = new Withdrawals();
 $a = $data->tampilData();
 ?>
@@ -28,6 +29,7 @@ $a = $data->tampilData();
         foreach($a as $row){
             ?>
             <tr>
+                <!-- membuat output dari database -->
                 <td class="text-center"><?php echo $no++ ?></td>
                 <td class="text-center"><?php echo $row['id_student_withdrawals'];?></td>
                 <td class="text-center"><?php echo $row['id_student'];?></td>

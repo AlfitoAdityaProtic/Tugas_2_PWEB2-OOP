@@ -1,4 +1,5 @@
 <?php 
+// pembuatan class database dan menghubungkan database
 class Database{
     private $host = "localhost";
     private $user ="root";
@@ -16,10 +17,12 @@ class Database{
     $this->conn->close();
   }
 }
+// pembuatan class Withdrawals yang mewarisi class database proses inheritance
 class Withdrawals extends database{
   public function __construct() {
       parent::__construct();
   }
+  // method yang menampilkan tabel student_withdrawals
   public function tampilData() {
       $sql = "SELECT * FROM student_withdrawals";
       $result = $this->conn->query($sql);
